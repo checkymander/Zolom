@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.36
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zolom", "Zolom\Zolom.csproj", "{F56DB329-7AFB-4FE1-9474-3519284FC50E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F56DB329-7AFB-4FE1-9474-3519284FC50E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56DB329-7AFB-4FE1-9474-3519284FC50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56DB329-7AFB-4FE1-9474-3519284FC50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56DB329-7AFB-4FE1-9474-3519284FC50E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FA96C8C-B077-40ED-86E8-BEE10B4503A6}
+	EndGlobalSection
+EndGlobal
