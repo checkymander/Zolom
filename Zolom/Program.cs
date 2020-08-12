@@ -21,8 +21,8 @@ namespace Zolom
                 {
                     case "--b64script":
                         {
-                            byte[] ScriptBytes = System.Convert.FromBase64String(args[0].Split(':')[1]);
-                            PyCode = System.Text.ASCIIEncoding.ASCII.GetString(ScriptBytes);
+                            byte[] ScriptBytes = Convert.FromBase64String(args[0].Split(':')[1]);
+                            PyCode = Encoding.ASCII.GetString(ScriptBytes);
                             break;
                         }
                     case "--script":
@@ -36,7 +36,6 @@ namespace Zolom
                             return;
                         }
                 }
-
             }
             else
             {
