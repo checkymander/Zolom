@@ -14,7 +14,35 @@ namespace Zolom
     {
         static void Main(string[] args)
         {
-            string PyCode = args[0];
+            string PyCode = "";
+            if (args.Length >= 1)
+            {
+                switch (args[0].Split(':')[0].ToLower())
+                {
+                    case "--b64script":
+                        {
+                            byte[] ScriptBytes = System.Convert.FromBase64String(args[0].Split(':')[1]);
+                            PyCode = System.Text.ASCIIEncoding.ASCII.GetString(ScriptBytes);
+                            break;
+                        }
+                    case "--script":
+                        {
+                            PyCode = args[0].Split(':')[1];
+                            break;
+                        }
+                    default:
+                        {
+                            PrintUsage();
+                            return;
+                        }
+                }
+
+            }
+            else
+            {
+                PrintUsage();
+                return;
+            }
             ScriptEngine engine = Python.CreateEngine();
             Assembly ass = Assembly.GetExecutingAssembly();
             var sysScope = engine.GetSysModule();
@@ -26,5 +54,11 @@ namespace Zolom
             script.Execute();
             Console.WriteLine("Finished Executing.");
         }
+        static void PrintUsage()
+        {
+            Console.WriteLine("Usage: zolom.exe --script:\"print 'hello world'\"");
+            Console.WriteLine("Usage: zolom.exe --b64script:cHJpbnQgImhlbGxvIHdvcmxkIg==");
+        }
     }
+
 }
